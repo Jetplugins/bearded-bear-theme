@@ -1,10 +1,10 @@
 <idea-plugin require-restart="true">
   <id>dev.jetplugins.beardedtheme</id>
-  <name>Bearded Theme</name>
-  <vendor email="beardedtheme@pm.me" url="https://github.com/BeardedBear/bearded-theme">Bearded Bear</vendor>
-  <version>1.0.0</version>
+  <name>Bearded Theme: Dark &amp; Light</name>
+  <vendor email="support@jetplugins.dev" url="https://jetplugins.dev">Bearded Bear</vendor>
+  <version>2026.1.0</version>
 
-  <product-descriptor code="PBEARDEDTHEME" release-date="20260213" release-version="12" optional="true"/>
+  <product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="true"/>
 
   <description><![CDATA[
     <h2>Bearded Theme for IntelliJ</h2>
