@@ -111,7 +111,7 @@ public class ThemeValidationTest {
 
         // Verify XML structure
         assertThat(xml).startsWith("<?xml");
-        assertThat(xml).contains("<scheme name=\"" + name + "\"");
+        assertThat(xml).contains("<scheme name=\"" + escapeXmlAttr(name) + "\"");
         assertThat(xml).contains("<colors>");
         assertThat(xml).contains("<attributes>");
 
@@ -489,6 +489,14 @@ public class ThemeValidationTest {
             return new Color(r, g, b);
         }
         return Color.GRAY;
+    }
+
+    private static String escapeXmlAttr(String value) {
+        return value
+            .replace("&", "&amp;")
+            .replace("\"", "&quot;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;");
     }
 
     private static Color parseColorSafe(JsonObject obj, String key, String fallback) {

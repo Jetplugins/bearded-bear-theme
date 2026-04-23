@@ -6,7 +6,7 @@
 - **Category**: UI Themes
 
 ## Pricing Model
-- **Type**: Subscription (Freemium)
+- **Type**: Paid subscription
 - **Monthly Price**: $1.00 USD/month
 - **Annual Price**: $10.00 USD/year (2 months free)
 - **Product Code**: PBEARDEDTHEME
@@ -22,24 +22,24 @@ Upload the built `.zip` from `build/distributions/` to https://plugins.jetbrains
 3. Set pricing tier:
    - Monthly: $1.00
    - Annual: $10.00
-4. Enable "Freemium" mode — the `optional="true"` attribute in `product-descriptor`
-   means the plugin works without a license but prompts for subscription
+4. Use paid-only mode — the `optional="false"` attribute in `product-descriptor`
+   means the plugin requires an active subscription
 
 ### 3. Product Descriptor
 The `plugin.xml` contains:
 ```xml
-<product-descriptor code="PBEARDEDTHEME" release-date="20240101" release-version="10" optional="true"/>
+<product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="false"/>
 ```
 
 - `code` = unique product code for licensing
-- `optional="true"` = freemium model (theme works without subscription, but user gets a prompt)
+- `optional="false"` = paid model requiring an active subscription
 - `release-date` = date of first release (YYYYMMDD format)
 - `release-version` = numeric version for license tracking
 
 ### 4. License Validation
 The `BeardedThemeLicenseCheck` class validates the subscription on project open
-via `LicensingFacade.getLicensedVersion("PBEARDEDTHEME")`. If unlicensed, it
-logs a warning but does not block functionality.
+via `LicensingFacade.getConfirmationStamp("PBEARDEDTHEME")`. If unlicensed, it
+shows a license-required warning.
 
 ### 5. Signing
 Set these environment variables for plugin signing:

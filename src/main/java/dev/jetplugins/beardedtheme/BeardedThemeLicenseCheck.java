@@ -17,9 +17,8 @@ import org.jetbrains.annotations.Nullable;
  *
  * JetBrains Marketplace handles the subscription flow ($1/month).
  * This activity checks the license state via the LicensingFacade API
- * and shows a notification if no active license is found. The theme still
- * loads (JetBrains policy requires themes to remain functional) but
- * a balloon notification reminds the user to subscribe.
+ * and shows a notification if no active license is found. Marketplace
+ * licensing is required for normal installation and updates.
  *
  * Product code: PBEARDEDTHEME (matches plugin.xml product-descriptor)
  */
@@ -53,11 +52,10 @@ public class BeardedThemeLicenseCheck implements ProjectActivity {
             NotificationGroupManager.getInstance()
                 .getNotificationGroup(NOTIFICATION_GROUP)
                 .createNotification(
-                    "Bearded Theme — unlicensed",
+                    "Bearded Theme license required",
                     "Your Bearded Theme subscription is not active. " +
-                    "The theme will continue to work, but please consider " +
-                    "<a href=\"https://plugins.jetbrains.com\">subscribing ($1/month)</a> " +
-                    "to support development.",
+                    "Please <a href=\"https://plugins.jetbrains.com\">activate a subscription ($1/month)</a> " +
+                    "to use the plugin.",
                     NotificationType.WARNING)
                 .setImportant(true)
                 .notify(project);

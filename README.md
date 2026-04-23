@@ -81,7 +81,7 @@ Tests validate theme JSON structure, editor scheme XML, WCAG contrast ratios, ic
 
 ## Subscription
 
-This is a freemium plugin. The theme works without a subscription, but a **$1/month** subscription on the JetBrains Marketplace supports continued development and updates.
+This is a paid plugin and requires an active **$1/month** subscription on the JetBrains Marketplace.
 
 ## Credits
 
