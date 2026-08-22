@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scheme name="Bearded Theme Surprising Watermelon" version="142" parent_scheme="Darcula">
   <metaInfo>
-    <property name="created">2024-01-01T00:00:00</property>
+    <property name="created">2026-08-21T00:00:00</property>
     <property name="ide">Idea</property>
-    <property name="ideVersion">2024.1.0.0</property>
-    <property name="modified">2024-01-01T00:00:00</property>
+    <property name="ideVersion">2025.3.0.0</property>
+    <property name="modified">2026-08-21T00:00:00</property>
     <property name="originalScheme">Bearded Theme Surprising Watermelon</property>
   </metaInfo>
   <colors>
@@ -60,10 +60,10 @@
     <option name="SEPARATOR_BELOW_COLOR" value="1D3237" />
     <option name="SOFT_WRAP_SIGN_COLOR" value="528F9B" />
     <option name="TEARLINE_COLOR" value="1D3237" />
-    <option name="VCS_ANNOTATIONS_COLOR_1" value="2A3F32" />
-    <option name="VCS_ANNOTATIONS_COLOR_2" value="11393D" />
-    <option name="VCS_ANNOTATIONS_COLOR_3" value="30362D" />
-    <option name="VCS_ANNOTATIONS_COLOR_4" value="332B28" />
+    <option name="VCS_ANNOTATIONS_COLOR_1" value="354C38" />
+    <option name="VCS_ANNOTATIONS_COLOR_2" value="104347" />
+    <option name="VCS_ANNOTATIONS_COLOR_3" value="3E3F31" />
+    <option name="VCS_ANNOTATIONS_COLOR_4" value="422E29" />
     <option name="VCS_ANNOTATIONS_COLOR_5" value="223C41" />
     <option name="VISUAL_INDENT_GUIDE" value="1D3237" />
     <option name="WHITESPACES" value="1D3237" />
@@ -143,19 +143,19 @@
     <!-- Numbers -->
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
 
     <!-- Constants -->
     <option name="DEFAULT_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
 
@@ -225,7 +225,7 @@
     </option>
     <option name="DEFAULT_STATIC_FIELD">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -377,12 +377,12 @@
     </option>
     <option name="CSS.COLOR">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
     <option name="CSS.NUMBER">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
     <option name="CSS.URL">
@@ -471,42 +471,42 @@
     <!-- Diff -->
     <option name="DIFF_INSERTED">
       <value>
-        <option name="BACKGROUND" value="2A3F32" />
+        <option name="BACKGROUND" value="354C38" />
       </value>
     </option>
     <option name="DIFF_DELETED">
       <value>
-        <option name="BACKGROUND" value="332B28" />
+        <option name="BACKGROUND" value="422E29" />
       </value>
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="BACKGROUND" value="11393D" />
+        <option name="BACKGROUND" value="104347" />
       </value>
     </option>
     <option name="DIFF_CONFLICT">
       <value>
-        <option name="BACKGROUND" value="30362D" />
+        <option name="BACKGROUND" value="3E3F31" />
       </value>
     </option>
 
     <!-- Search results -->
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="4D4A34" />
-        <option name="ERROR_STRIPE_COLOR" value="4D4A34" />
+        <option name="BACKGROUND" value="3E3F31" />
+        <option name="ERROR_STRIPE_COLOR" value="3E3F31" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="5B4536" />
-        <option name="ERROR_STRIPE_COLOR" value="5B4536" />
+        <option name="BACKGROUND" value="483C32" />
+        <option name="ERROR_STRIPE_COLOR" value="483C32" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="4D4A34" />
-        <option name="ERROR_STRIPE_COLOR" value="4D4A34" />
+        <option name="BACKGROUND" value="3E3F31" />
+        <option name="ERROR_STRIPE_COLOR" value="3E3F31" />
       </value>
     </option>
 
@@ -692,7 +692,7 @@
     <!-- Enumerated references -->
     <option name="ENUM_CONST">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
 
@@ -822,7 +822,7 @@
     </option>
     <option name="PY.SELF_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -850,7 +850,7 @@
     </option>
     <option name="GO_BUILTIN_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="C13838" />
+        <option name="FOREGROUND" value="C44242" />
       </value>
     </option>
     <option name="GO_EXPORTED_FUNCTION">

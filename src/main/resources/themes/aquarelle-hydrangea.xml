@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scheme name="Bearded Theme Aquarelle Hydrangea" version="142" parent_scheme="Darcula">
   <metaInfo>
-    <property name="created">2024-01-01T00:00:00</property>
+    <property name="created">2026-08-21T00:00:00</property>
     <property name="ide">Idea</property>
-    <property name="ideVersion">2024.1.0.0</property>
-    <property name="modified">2024-01-01T00:00:00</property>
+    <property name="ideVersion">2025.3.0.0</property>
+    <property name="modified">2026-08-21T00:00:00</property>
     <property name="originalScheme">Bearded Theme Aquarelle Hydrangea</property>
   </metaInfo>
   <colors>
@@ -60,10 +60,10 @@
     <option name="SEPARATOR_BELOW_COLOR" value="2B324C" />
     <option name="SOFT_WRAP_SIGN_COLOR" value="6774A9" />
     <option name="TEARLINE_COLOR" value="2B324C" />
-    <option name="VCS_ANNOTATIONS_COLOR_1" value="38424B" />
-    <option name="VCS_ANNOTATIONS_COLOR_2" value="374256" />
-    <option name="VCS_ANNOTATIONS_COLOR_3" value="3E3F4B" />
-    <option name="VCS_ANNOTATIONS_COLOR_4" value="3D3545" />
+    <option name="VCS_ANNOTATIONS_COLOR_1" value="434F52" />
+    <option name="VCS_ANNOTATIONS_COLOR_2" value="414E63" />
+    <option name="VCS_ANNOTATIONS_COLOR_3" value="4C4A52" />
+    <option name="VCS_ANNOTATIONS_COLOR_4" value="4A3C4A" />
     <option name="VCS_ANNOTATIONS_COLOR_5" value="313856" />
     <option name="VISUAL_INDENT_GUIDE" value="2B324C" />
     <option name="WHITESPACES" value="2B324C" />
@@ -471,42 +471,42 @@
     <!-- Diff -->
     <option name="DIFF_INSERTED">
       <value>
-        <option name="BACKGROUND" value="38424B" />
+        <option name="BACKGROUND" value="434F52" />
       </value>
     </option>
     <option name="DIFF_DELETED">
       <value>
-        <option name="BACKGROUND" value="3D3545" />
+        <option name="BACKGROUND" value="4A3C4A" />
       </value>
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="BACKGROUND" value="374256" />
+        <option name="BACKGROUND" value="414E63" />
       </value>
     </option>
     <option name="DIFF_CONFLICT">
       <value>
-        <option name="BACKGROUND" value="3E3F4B" />
+        <option name="BACKGROUND" value="4C4A52" />
       </value>
     </option>
 
     <!-- Search results -->
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="615F5E" />
-        <option name="ERROR_STRIPE_COLOR" value="615F5E" />
+        <option name="BACKGROUND" value="505055" />
+        <option name="ERROR_STRIPE_COLOR" value="505055" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="5B575B" />
-        <option name="ERROR_STRIPE_COLOR" value="5B575B" />
+        <option name="BACKGROUND" value="4C4A52" />
+        <option name="ERROR_STRIPE_COLOR" value="4C4A52" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="615F5E" />
-        <option name="ERROR_STRIPE_COLOR" value="615F5E" />
+        <option name="BACKGROUND" value="505055" />
+        <option name="ERROR_STRIPE_COLOR" value="505055" />
       </value>
     </option>
 

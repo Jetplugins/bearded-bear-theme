@@ -1,19 +1,27 @@
 {
   "name": "Bearded Theme Stained Purple",
   "dark": true,
+  "parentTheme": "Islands Dark",
   "author": "Bearded Bear (IntelliJ port)",
   "editorScheme": "/themes/stained-purple.xml",
   "ui": {
+    "Islands": 1,
+    "Island.arc": 20,
+    "Island.arc.compact": 16,
+    "Island.borderWidth": 5,
+    "Island.borderWidth.compact": 4,
+    "Island.borderColor": "#20192b",
+    "Island.inactiveAlpha": 0.44,
     "*": {
-      "arc": "7",
+      "arc": 10,
       "background": "#20192b",
       "foreground": "#aa99c4",
       "selectionBackground": "#3d3052",
       "selectionForeground": "#aa99c4",
       "selectionInactiveBackground": "#332845",
       "disabledBackground": "#2a2138",
-      "disabledForeground": "#745b9c",
-      "disabledText": "#745b9c",
+      "disabledForeground": "#7b63a1",
+      "disabledText": "#7b63a1",
       "errorForeground": "#E35535",
       "infoForeground": "#4FA2FF",
       "lightSelectionBackground": "#382c4b",
@@ -26,8 +34,9 @@
       "pressedBorderColor": "#2c223b"
     },
     "Button": {
+      "arc": 10,
       "default": {
-        "foreground": "#ffffff",
+        "foreground": "#000000",
         "startBackground": "#a948ef",
         "endBackground": "#a948ef",
         "startBorderColor": "#a948ef",
@@ -46,15 +55,16 @@
       "foreground": "#aa99c4"
     },
     "ComboBox": {
+      "arc": 10,
       "background": "#2a2138",
       "foreground": "#aa99c4",
       "selectionBackground": "#a948ef",
-      "selectionForeground": "#ffffff",
+      "selectionForeground": "#000000",
       "nonEditableBackground": "#2a2138",
       "ArrowButton": {
         "background": "#2a2138",
         "nonEditableBackground": "#2a2138",
-        "iconColor": "#745b9c"
+        "iconColor": "#7b63a1"
       }
     },
     "CompletionPopup": {
@@ -66,12 +76,12 @@
     },
     "Counter": {
       "background": "#a948ef",
-      "foreground": "#ffffff"
+      "foreground": "#000000"
     },
     "DefaultTabs": {
       "background": "#20192b",
       "underlineColor": "#a948ef",
-      "inactiveUnderlineColor": "#745b9c",
+      "inactiveUnderlineColor": "#7b63a1",
       "hoverBackground": "#332845",
       "underlinedTabBackground": "#271f35",
       "underlinedTabForeground": "#aa99c4",
@@ -87,13 +97,16 @@
       "shortcutForeground": "#a948ef"
     },
     "EditorTabs": {
-      "background": "#2a2138",
+      "background": "#20192b",
       "underlineColor": "#a948ef",
-      "underlineHeight": 3,
-      "underlinedTabBackground": "#20192b",
+      "underlinedBorderColor": "#a948ef",
+      "inactiveUnderlinedTabBorderColor": "#2c223b",
+      "underlineHeight": 2,
+      "underlinedTabBackground": "#332845",
+      "inactiveUnderlinedTabBackground": "#2a2138",
       "underlinedTabForeground": "#aa99c4",
       "inactiveUnderlineColor": "transparent",
-      "inactiveMaskColor": "00000000"
+      "inactiveMaskColor": "#00000000"
     },
     "FileColor": {
       "Yellow": "#271f35",
@@ -108,7 +121,7 @@
       "hoverForeground": "#bf77f3",
       "pressedForeground": "#9319eb",
       "visitedForeground": "#B78AFF",
-      "secondaryForeground": "#745b9c"
+      "secondaryForeground": "#7b63a1"
     },
     "List": {
       "background": "#20192b",
@@ -129,7 +142,7 @@
       "borderColor": "#2c223b"
     },
     "MenuBar": {
-      "background": "#20192b",
+      "background": "#3b3544",
       "foreground": "#aa99c4",
       "hoverBackground": "#332845",
       "selectionBackground": "#332845",
@@ -137,6 +150,13 @@
     },
     "NavBar": {
       "borderColor": "#2c223b"
+    },
+    "MainToolbar": {
+      "background": "#3b3544",
+      "borderColor": "#00000000"
+    },
+    "MainWindow": {
+      "background": "#3b3544"
     },
     "Notification": {
       "background": "#2a2138",
@@ -176,16 +196,17 @@
       "tagForeground": "#aa99c4",
       "Button": {
         "installBackground": "#a948ef",
-        "installForeground": "#ffffff",
+        "installForeground": "#000000",
         "installBorderColor": "#a948ef",
         "installFillBackground": "#a948ef",
-        "installFillForeground": "#ffffff",
+        "installFillForeground": "#000000",
         "updateBackground": "#4FA2FF",
-        "updateForeground": "#ffffff",
+        "updateForeground": "#000000",
         "updateBorderColor": "#4FA2FF"
       }
     },
     "Popup": {
+      "arc": 12,
       "background": "#20192b",
       "foreground": "#aa99c4",
       "Header": {
@@ -194,13 +215,13 @@
       },
       "Advertiser": {
         "background": "#2a2138",
-        "foreground": "#745b9c",
+        "foreground": "#7b63a1",
         "borderColor": "#2c223b"
       },
       "borderColor": "#2c223b",
       "inactiveBorderColor": "#2c223b",
       "separatorColor": "#2c223b",
-      "separatorForeground": "#745b9c",
+      "separatorForeground": "#7b63a1",
       "paintBorder": true
     },
     "ProgressBar": {
@@ -242,7 +263,7 @@
     "SearchEverywhere": {
       "Advertiser": {
         "background": "#2a2138",
-        "foreground": "#745b9c",
+        "foreground": "#7b63a1",
         "borderColor": "#2c223b"
       },
       "Header": {
@@ -267,9 +288,9 @@
       "errorForeground": "#E35535"
     },
     "StatusBar": {
-      "background": "#2a2138",
-      "foreground": "#745b9c",
-      "borderColor": "#2c223b",
+      "background": "#3b3544",
+      "foreground": "#7b63a1",
+      "borderColor": "#00000000",
       "hoverBackground": "#332845"
     },
     "TabbedPane": {
@@ -304,6 +325,7 @@
       "selectionForeground": "#aa99c4"
     },
     "TextField": {
+      "arc": 10,
       "background": "#2a2138",
       "foreground": "#aa99c4",
       "caretForeground": "#aa99c4",
@@ -311,23 +333,23 @@
       "selectionForeground": "#aa99c4"
     },
     "TitlePane": {
-      "background": "#20192b",
+      "background": "#3b3544",
       "foreground": "#aa99c4",
-      "inactiveBackground": "#20192b",
-      "inactiveForeground": "#745b9c",
+      "inactiveBackground": "#3b3544",
+      "inactiveForeground": "#7b63a1",
       "Button": {
         "hoverBackground": "#332845"
       }
     },
     "ToggleButton": {
       "onBackground": "#a948ef",
-      "onForeground": "#ffffff",
+      "onForeground": "#000000",
       "offBackground": "#332845",
       "offForeground": "#aa99c4",
       "buttonColor": "#ffffff"
     },
     "ToolBar": {
-      "background": "#20192b",
+      "background": "#3b3544",
       "foreground": "#aa99c4"
     },
     "ToolWindow": {
@@ -342,6 +364,13 @@
         "inactiveBackground": "#2a2138",
         "borderColor": "#2c223b"
       },
+      "Stripe": {
+        "background": "#3b3544",
+        "borderColor": "#00000000",
+        "hoverBackground": "#332845",
+        "selectedBackground": "#a948ef",
+        "selectedForeground": "#000000"
+      },
       "HeaderTab": {
         "selectedBackground": "#20192b",
         "selectedInactiveBackground": "#2a2138",
@@ -349,7 +378,7 @@
         "hoverInactiveBackground": "#2a2138",
         "underlineColor": "#a948ef",
         "underlineHeight": 3,
-        "inactiveUnderlineColor": "#745b9c"
+        "inactiveUnderlineColor": "#7b63a1"
       }
     },
     "Tree": {
@@ -397,14 +426,14 @@
   },
   "icons": {
     "ColorPalette": {
-      "Actions.Grey": "#745b9c",
+      "Actions.Grey": "#7b63a1",
       "Actions.Red": "#E35535",
       "Actions.Yellow": "#FF955C",
       "Actions.Green": "#42DD76",
       "Actions.Blue": "#4FA2FF",
-      "Actions.GreyInline": "#745b9c",
-      "Actions.GreyInline.Dark": "#745b9c",
-      "Objects.Grey": "#745b9c",
+      "Actions.GreyInline": "#7b63a1",
+      "Actions.GreyInline.Dark": "#7b63a1",
+      "Objects.Grey": "#7b63a1",
       "Objects.RedStatus": "#E35535",
       "Objects.Red": "#E35535",
       "Objects.Pink": "#F38CEC",
@@ -417,14 +446,12 @@
       "Objects.GreenAndroid": "#42DD76",
       "Checkbox.Background.Default": "#2a2138",
       "Checkbox.Border.Default": "#2c223b",
-      "Checkbox.Foreground.Selected": "#ffffff",
-      "Checkbox.Focus.Thin.Default": "#a948ef",
-      "Checkbox.Focus.Thin.Selected": "#a948ef",
+      "Checkbox.Foreground.Selected": "#000000",
       "Checkbox.Background.Selected": "#a948ef",
       "Checkbox.Border.Selected": "#a948ef",
       "Checkbox.Background.Disabled": "#2a2138",
       "Checkbox.Border.Disabled": "#2c223b",
-      "Checkbox.Foreground.Disabled": "#745b9c"
+      "Checkbox.Foreground.Disabled": "#7b63a1"
     }
   }
 }

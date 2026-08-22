@@ -4,5 +4,39 @@
     "config:recommended",
     "schedule:monthly"
   ],
-  "timezone": "Australia/Sydney"
+  "timezone": "Australia/Sydney",
+  "dependencyDashboard": true,
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "description": "Keep IntelliJ Platform build tooling together",
+      "matchManagers": ["gradle", "gradle-wrapper"],
+      "matchPackageNames": [
+        "org.jetbrains.intellij.platform",
+        "gradle"
+      ],
+      "groupName": "IntelliJ Platform build tooling"
+    },
+    {
+      "description": "Group Java test libraries",
+      "matchManagers": ["gradle"],
+      "matchDepTypes": ["testImplementation"],
+      "groupName": "Java test dependencies"
+    },
+    {
+      "description": "Group GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on the first day of the month"]
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security", "dependencies"]
+  }
 }

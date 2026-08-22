@@ -1,7 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij") version "1.17.4"
-    id("org.jetbrains.kotlin.jvm") version "1.9.25"
+    id("org.jetbrains.intellij.platform") version "2.18.1"
 }
 
 group = "dev.jetplugins.beardedtheme"
@@ -9,46 +8,215 @@ version = "2026.1.1"
 
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 dependencies {
     testImplementation("junit:junit:4.13.2")
-    testImplementation("com.google.code.gson:gson:2.10.1")
-    testImplementation("org.assertj:assertj-core:3.25.3")
+    testImplementation("com.google.code.gson:gson:2.14.0")
+    testImplementation("org.assertj:assertj-core:3.27.7")
+
+    intellijPlatform {
+        intellijIdea("2025.3")
+        javaCompiler()
+        pluginVerifier()
+        zipSigner()
+    }
 }
 
-intellij {
-    version.set("2024.1")
-    type.set("IC")
-    plugins.set(listOf())
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+val marketplaceScreenshotsDirectory = layout.buildDirectory.dir("marketplace-screenshots")
+val marketplaceVideoDirectory = layout.buildDirectory.dir("marketplace-video")
+val marketplaceVideoFramesDirectory = marketplaceScreenshotsDirectory.map { it.dir("_video-frames") }
+val marketplaceVideoFile = marketplaceVideoDirectory.map { it.file("bearded-theme-demo.mp4") }
+val marketplaceDemoDirectory = layout.projectDirectory.dir("marketplace-demo")
+val marketplaceSampleFile = marketplaceDemoDirectory.file("src/main/java/demo/store/OrderService.java")
+val screenshotThemes = providers.gradleProperty("screenshotThemes").orElse("all")
+val marketplaceCaptureSandbox = layout.projectDirectory.dir(
+    ".intellijPlatform/sandbox/${rootProject.name}/IU-2025.3",
+)
+val cleanMarketplaceScreenshots = tasks.register<Delete>("cleanMarketplaceScreenshots") {
+    delete(marketplaceScreenshotsDirectory, marketplaceVideoDirectory)
+}
+val cleanMarketplaceScreenshotIdeState = tasks.register<Delete>("cleanMarketplaceScreenshotIdeState") {
+    delete(
+        marketplaceCaptureSandbox.dir("config_captureMarketplaceScreenshots"),
+        marketplaceCaptureSandbox.dir("system_captureMarketplaceScreenshots"),
+        marketplaceCaptureSandbox.dir("log_captureMarketplaceScreenshots"),
+        marketplaceDemoDirectory.dir(".idea"),
+    )
+}
+
+intellijPlatform {
+    buildSearchableOptions = false
+
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = "253"
+            untilBuild = provider { null }
+        }
+    }
+
+    signing {
+        certificateChain = providers.environmentVariable("CERTIFICATE_CHAIN")
+        privateKey = providers.environmentVariable("PRIVATE_KEY")
+        password = providers.environmentVariable("PRIVATE_KEY_PASSWORD")
+    }
+
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
+    }
+
+    pluginVerification {
+        ides {
+            providers.gradleProperty("verifierIdeVersions")
+                .orElse("2025.3,2026.1,2026.2")
+                .get()
+                .split(',')
+                .map(String::trim)
+                .filter(String::isNotEmpty)
+                .forEach { create("IU", it) }
+        }
+    }
+}
+
+intellijPlatformTesting {
+    runIde {
+        register("captureMarketplaceScreenshots") {
+            task {
+                group = "documentation"
+                description = "Launches IntelliJ and captures every selected theme from the live IDE UI."
+                dependsOn(cleanMarketplaceScreenshots)
+                args(marketplaceDemoDirectory.asFile.absolutePath)
+                systemProperty(
+                    "beardedTheme.screenshotOutputDirectory",
+                    marketplaceScreenshotsDirectory.get().asFile.absolutePath,
+                )
+                systemProperty(
+                    "beardedTheme.screenshotSampleFile",
+                    marketplaceSampleFile.asFile.absolutePath,
+                )
+                systemProperty("beardedTheme.screenshotThemes", screenshotThemes.get())
+                jvmArgs(
+                    "-Didea.trust.all.projects=true",
+                    "-Dide.show.tips.on.startup.default.value=false",
+                    "-Djb.consents.confirmation.enabled=false",
+                    "-Djb.privacy.policy.text=<!--999.999-->",
+                    "-Dide.mac.message.dialogs.as.sheets=false",
+                    "-Dapple.laf.useScreenMenuBar=false",
+                    "-DjbScreenMenuBar.enabled=false",
+                )
+                inputs.dir(marketplaceDemoDirectory)
+                inputs.file(layout.projectDirectory.file("src/main/resources/themes/theme-list.json"))
+                outputs.dir(marketplaceScreenshotsDirectory)
+                outputs.upToDateWhen { false }
+            }
+        }
+    }
+}
+
+tasks.named("prepareSandbox_captureMarketplaceScreenshots") {
+    dependsOn(cleanMarketplaceScreenshotIdeState)
+}
+
+val stripMarketplaceScreenshotLicense = tasks.register<JavaExec>("stripMarketplaceScreenshotLicense") {
+    description = "Removes paid-license metadata from the disposable screenshot sandbox only."
+    dependsOn("prepareSandbox_captureMarketplaceScreenshots", tasks.testClasses)
+    classpath = sourceSets.test.get().runtimeClasspath
+    mainClass.set("dev.jetplugins.beardedtheme.ScreenshotSandboxDescriptorPatcher")
+    args(
+        marketplaceCaptureSandbox
+            .dir("plugins_captureMarketplaceScreenshots/${rootProject.name}/lib")
+            .asFile
+            .absolutePath,
+    )
+    outputs.upToDateWhen { false }
+}
+
+tasks.named("captureMarketplaceScreenshots") {
+    dependsOn(stripMarketplaceScreenshotLicense)
+}
+
+val verifyMarketplaceScreenshots = tasks.register<JavaExec>("verifyMarketplaceScreenshots") {
+    group = "documentation"
+    description = "Verifies every screenshot created by the live IntelliJ capture session."
+    dependsOn("captureMarketplaceScreenshots", tasks.testClasses)
+    classpath = sourceSets.test.get().runtimeClasspath
+    mainClass.set("dev.jetplugins.beardedtheme.MarketplaceScreenshotVerifier")
+    args(
+        marketplaceScreenshotsDirectory.get().asFile.absolutePath,
+        layout.projectDirectory.file("src/main/resources/themes/theme-list.json").asFile.absolutePath,
+        screenshotThemes.get(),
+    )
+    outputs.upToDateWhen { false }
+}
+
+val prepareMarketplaceVideoDirectory = tasks.register<Exec>("prepareMarketplaceVideoDirectory") {
+    description = "Creates the clean output directory after the live IntelliJ capture completes."
+    dependsOn("captureMarketplaceScreenshots")
+    commandLine("mkdir", "-p", marketplaceVideoDirectory.get().asFile.absolutePath)
+    outputs.dir(marketplaceVideoDirectory)
+    outputs.upToDateWhen { false }
+}
+
+val encodeMarketplaceVideo = tasks.register<Exec>("encodeMarketplaceVideo") {
+    group = "documentation"
+    description = "Encodes a 12-second Marketplace demo from frames captured from the live IntelliJ UI."
+    dependsOn(prepareMarketplaceVideoDirectory)
+    inputs.dir(marketplaceVideoFramesDirectory)
+    outputs.file(marketplaceVideoFile)
+    outputs.upToDateWhen { false }
+    commandLine(
+        "ffmpeg",
+        "-hide_banner",
+        "-loglevel", "warning",
+        "-y",
+        "-framerate", "10",
+        "-i", marketplaceVideoFramesDirectory.get().file("frame-%04d.png").asFile.absolutePath,
+        "-c:v", "libx264",
+        "-preset", "medium",
+        "-crf", "18",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        marketplaceVideoFile.get().asFile.absolutePath,
+    )
+}
+
+val verifyMarketplaceVideo = tasks.register<JavaExec>("verifyMarketplaceVideo") {
+    group = "documentation"
+    description = "Verifies the dimensions, duration, frame sequence, and UI changes in the Marketplace video."
+    dependsOn(encodeMarketplaceVideo, tasks.testClasses)
+    classpath = sourceSets.test.get().runtimeClasspath
+    mainClass.set("dev.jetplugins.beardedtheme.MarketplaceVideoVerifier")
+    args(
+        marketplaceVideoFile.get().asFile.absolutePath,
+        marketplaceVideoFramesDirectory.get().asFile.absolutePath,
+    )
+    outputs.upToDateWhen { false }
 }
 
 tasks {
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+    withType<JavaCompile>().configureEach {
+        options.release = 21
+        options.compilerArgs.add("-Xlint:deprecation")
     }
 
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
+    register("createScreenshots") {
+        group = "documentation"
+        description = "Captures and verifies 1200x760 Marketplace screenshots and a 12-second video from a live IntelliJ IDE."
+        dependsOn(verifyMarketplaceScreenshots, verifyMarketplaceVideo)
     }
 
-    patchPluginXml {
-        sinceBuild.set("241")
-        untilBuild.set("")
-    }
-
-    signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-    }
-
-    publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
-    }
-
-    buildSearchableOptions {
-        enabled = false
+    register("createMarketplaceVideo") {
+        group = "documentation"
+        description = "Captures, encodes, and verifies the 12-second live IntelliJ Marketplace demo video."
+        dependsOn(verifyMarketplaceVideo)
     }
 }

@@ -510,5 +510,13 @@
     "hc": false,
     "themeFile": "webdevcody.theme.json",
     "schemeFile": "webdevcody.xml"
+  },
+  {
+    "slug": "islands-moonstone",
+    "name": "Bearded Theme Islands Moonstone",
+    "dark": true,
+    "hc": false,
+    "themeFile": "islands-moonstone.theme.json",
+    "schemeFile": "islands-moonstone.xml"
   }
 ]

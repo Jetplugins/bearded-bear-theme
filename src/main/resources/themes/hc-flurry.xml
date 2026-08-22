@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scheme name="Bearded Theme HC Flurry" version="142" parent_scheme="Default">
   <metaInfo>
-    <property name="created">2024-01-01T00:00:00</property>
+    <property name="created">2026-08-21T00:00:00</property>
     <property name="ide">Idea</property>
-    <property name="ideVersion">2024.1.0.0</property>
-    <property name="modified">2024-01-01T00:00:00</property>
+    <property name="ideVersion">2025.3.0.0</property>
+    <property name="modified">2026-08-21T00:00:00</property>
     <property name="originalScheme">Bearded Theme HC Flurry</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="AFEA7B" />
-    <option name="ANNOTATIONS_COLOR" value="6C98D3" />
+    <option name="ANNOTATIONS_COLOR" value="6189BE" />
     <option name="CARET_COLOR" value="264C7F" />
     <option name="CARET_ROW_COLOR" value="E9F0F8" />
     <option name="CONSOLE_BACKGROUND_KEY" value="F5F8FC" />
@@ -18,22 +18,22 @@
     <option name="DOCUMENTATION_COLOR" value="F5F8FC" />
     <option name="DOC_COMMENT_GUIDE" value="CEDDF0" />
     <option name="DOC_COMMENT_LINK" value="0076C5" />
-    <option name="ERROR_HINT" value="FD604F" />
-    <option name="FILESTATUS_ADDED" value="AFEA7B" />
-    <option name="FILESTATUS_DELETED" value="FD604F" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="6C98D3" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="6C98D3" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="FFAA7D" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="FFAA7D" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="FFAA7D" />
+    <option name="ERROR_HINT" value="F05B4B" />
+    <option name="FILESTATUS_ADDED" value="729850" />
+    <option name="FILESTATUS_DELETED" value="F05B4B" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="6189BE" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="6189BE" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="B27757" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="B27757" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="B27757" />
     <option name="FILESTATUS_MERGED" value="7522D3" />
-    <option name="FILESTATUS_MODIFIED" value="7FD7F5" />
-    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="7FD7F5" />
-    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="7FD7F5" />
-    <option name="FILESTATUS_UNKNOWN" value="FD604F" />
-    <option name="FILESTATUS_addedOutside" value="AFEA7B" />
-    <option name="FILESTATUS_changelistConflict" value="FFAA7D" />
-    <option name="FILESTATUS_modifiedOutside" value="7FD7F5" />
+    <option name="FILESTATUS_MODIFIED" value="538C9F" />
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="538C9F" />
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="538C9F" />
+    <option name="FILESTATUS_UNKNOWN" value="F05B4B" />
+    <option name="FILESTATUS_addedOutside" value="729850" />
+    <option name="FILESTATUS_changelistConflict" value="B27757" />
+    <option name="FILESTATUS_modifiedOutside" value="538C9F" />
     <option name="FOLDED_TEXT_BORDER_COLOR" value="CEDDF0" />
     <option name="GUTTER_BACKGROUND" value="F5F8FC" />
     <option name="IGNORED_ADDED_LINES_BORDER_COLOR" value="AFEA7B" />
@@ -42,7 +42,7 @@
     <option name="INDENT_GUIDE" value="CEDDF0" />
     <option name="INFORMATION_HINT" value="DDE8F5" />
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="264C7F" />
-    <option name="LINE_NUMBERS_COLOR" value="6C98D3" />
+    <option name="LINE_NUMBERS_COLOR" value="6189BE" />
     <option name="LOOKUP_COLOR" value="F5F8FC" />
     <option name="METHOD_SEPARATORS_COLOR" value="CEDDF0" />
     <option name="MODIFIED_LINES_COLOR" value="7FD7F5" />
@@ -52,18 +52,18 @@
     <option name="RIGHT_MARGIN_COLOR" value="CEDDF0" />
     <option name="SCROLL_BAR_THUMB_BORDER" value="BACFEA" />
     <option name="SCROLL_BAR_THUMB_COLOR" value="C6D7EE" />
-    <option name="SELECTED_INDENT_GUIDE" value="6C98D3" />
-    <option name="SELECTED_TEARLINE_COLOR" value="6C98D3" />
+    <option name="SELECTED_INDENT_GUIDE" value="6189BE" />
+    <option name="SELECTED_TEARLINE_COLOR" value="6189BE" />
     <option name="SELECTION_BACKGROUND" value="C6D7EE" />
     <option name="SELECTION_FOREGROUND" />
     <option name="SEPARATOR_ABOVE_COLOR" value="CEDDF0" />
     <option name="SEPARATOR_BELOW_COLOR" value="CEDDF0" />
-    <option name="SOFT_WRAP_SIGN_COLOR" value="6C98D3" />
+    <option name="SOFT_WRAP_SIGN_COLOR" value="6189BE" />
     <option name="TEARLINE_COLOR" value="CEDDF0" />
-    <option name="VCS_ANNOTATIONS_COLOR_1" value="EBF6E9" />
-    <option name="VCS_ANNOTATIONS_COLOR_2" value="E3F3FB" />
-    <option name="VCS_ANNOTATIONS_COLOR_3" value="F7ECE9" />
-    <option name="VCS_ANNOTATIONS_COLOR_4" value="F6E1E2" />
+    <option name="VCS_ANNOTATIONS_COLOR_1" value="D8E3D6" />
+    <option name="VCS_ANNOTATIONS_COLOR_2" value="D1E0E8" />
+    <option name="VCS_ANNOTATIONS_COLOR_3" value="E6DCD8" />
+    <option name="VCS_ANNOTATIONS_COLOR_4" value="F4D5D5" />
     <option name="VCS_ANNOTATIONS_COLOR_5" value="C6D7EE" />
     <option name="VISUAL_INDENT_GUIDE" value="CEDDF0" />
     <option name="WHITESPACES" value="CEDDF0" />
@@ -81,19 +81,19 @@
     <!-- Comments -->
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -117,7 +117,7 @@
     <!-- Keywords -->
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
       </value>
     </option>
 
@@ -135,7 +135,7 @@
     </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
       <value>
-        <option name="FOREGROUND" value="FD604F" />
+        <option name="FOREGROUND" value="F05B4B" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -293,7 +293,7 @@
     <!-- Template language -->
     <option name="DEFAULT_TEMPLATE_LANGUAGE_COLOR">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
       </value>
     </option>
 
@@ -357,7 +357,7 @@
     </option>
     <option name="CSS.TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
       </value>
     </option>
     <option name="CSS.CLASS_NAME">
@@ -430,7 +430,7 @@
     </option>
     <option name="MARKDOWN_HEADER_LEVEL_3">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -471,42 +471,42 @@
     <!-- Diff -->
     <option name="DIFF_INSERTED">
       <value>
-        <option name="BACKGROUND" value="EBF6E9" />
+        <option name="BACKGROUND" value="D8E3D6" />
       </value>
     </option>
     <option name="DIFF_DELETED">
       <value>
-        <option name="BACKGROUND" value="F6E1E2" />
+        <option name="BACKGROUND" value="F4D5D5" />
       </value>
     </option>
     <option name="DIFF_MODIFIED">
       <value>
-        <option name="BACKGROUND" value="E3F3FB" />
+        <option name="BACKGROUND" value="D1E0E8" />
       </value>
     </option>
     <option name="DIFF_CONFLICT">
       <value>
-        <option name="BACKGROUND" value="F7ECE9" />
+        <option name="BACKGROUND" value="E6DCD8" />
       </value>
     </option>
 
     <!-- Search results -->
     <option name="SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="E5D5B1" />
-        <option name="ERROR_STRIPE_COLOR" value="E5D5B1" />
+        <option name="BACKGROUND" value="E7DDC5" />
+        <option name="ERROR_STRIPE_COLOR" value="E7DDC5" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="E3CAB0" />
-        <option name="ERROR_STRIPE_COLOR" value="E3CAB0" />
+        <option name="BACKGROUND" value="E8D7C5" />
+        <option name="ERROR_STRIPE_COLOR" value="E8D7C5" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
       <value>
-        <option name="BACKGROUND" value="E5D5B1" />
-        <option name="ERROR_STRIPE_COLOR" value="E5D5B1" />
+        <option name="BACKGROUND" value="E7DDC5" />
+        <option name="ERROR_STRIPE_COLOR" value="E7DDC5" />
       </value>
     </option>
 
@@ -519,7 +519,7 @@
     </option>
     <option name="UNMATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FD604F" />
+        <option name="FOREGROUND" value="F05B4B" />
         <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
@@ -528,39 +528,39 @@
     <!-- Errors / Warnings -->
     <option name="ERRORS_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="FD604F" />
-        <option name="ERROR_STRIPE_COLOR" value="FD604F" />
+        <option name="EFFECT_COLOR" value="F05B4B" />
+        <option name="ERROR_STRIPE_COLOR" value="F05B4B" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="FFAA7D" />
-        <option name="ERROR_STRIPE_COLOR" value="FFAA7D" />
+        <option name="EFFECT_COLOR" value="B27757" />
+        <option name="ERROR_STRIPE_COLOR" value="B27757" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="INFO_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="7FD7F5" />
+        <option name="EFFECT_COLOR" value="538C9F" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEPRECATED_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="6C98D3" />
+        <option name="EFFECT_COLOR" value="6189BE" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="WRONG_REFERENCES_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="FD604F" />
+        <option name="FOREGROUND" value="F05B4B" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -591,7 +591,7 @@
     <!-- TODO -->
     <option name="TODO_DEFAULT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
         <option name="FONT_TYPE" value="3" />
         <option name="ERROR_STRIPE_COLOR" value="C08403" />
       </value>
@@ -619,7 +619,7 @@
     </option>
     <option name="BREADCRUMBS_DEFAULT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
       </value>
     </option>
     <option name="BREADCRUMBS_HOVERED">
@@ -629,7 +629,7 @@
     </option>
     <option name="BREADCRUMBS_INACTIVE">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
       </value>
     </option>
 
@@ -641,7 +641,7 @@
     </option>
     <option name="CONSOLE_ERROR_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="FD604F" />
+        <option name="FOREGROUND" value="F05B4B" />
       </value>
     </option>
     <option name="CONSOLE_USER_INPUT">
@@ -651,17 +651,17 @@
     </option>
     <option name="CONSOLE_SYSTEM_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
       </value>
     </option>
     <option name="LOG_ERROR_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="FD604F" />
+        <option name="FOREGROUND" value="F05B4B" />
       </value>
     </option>
     <option name="LOG_WARNING_OUTPUT">
       <value>
-        <option name="FOREGROUND" value="FFAA7D" />
+        <option name="FOREGROUND" value="B27757" />
       </value>
     </option>
 
@@ -699,7 +699,7 @@
     <!-- Inline parameter hints -->
     <option name="INLINE_PARAMETER_HINT">
       <value>
-        <option name="FOREGROUND" value="6C98D3" />
+        <option name="FOREGROUND" value="6189BE" />
         <option name="BACKGROUND" value="C6D7EE" />
       </value>
     </option>
@@ -729,7 +729,7 @@
     </option>
     <option name="RAINBOW_COLOR3">
       <value>
-        <option name="FOREGROUND" value="C08403" />
+        <option name="FOREGROUND" value="B67D03" />
       </value>
     </option>
     <option name="RAINBOW_COLOR4">

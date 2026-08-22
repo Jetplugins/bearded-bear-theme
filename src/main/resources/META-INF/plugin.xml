@@ -7,67 +7,68 @@
   <product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="false"/>
 
   <description><![CDATA[
-    <h2>Bearded Theme for IntelliJ</h2>
-    <p>A carefully crafted collection of <b>64 color themes</b> for JetBrains IDEs,
-    ported from the popular VS Code extension by BeardedBear.</p>
+    <h2>Give your JetBrains IDE a warmer, more distinctive workspace</h2>
+    <p>Bearded Theme includes <b>65 coordinated dark, light, and high-contrast themes</b>,
+    each with a matching editor scheme and the complete Bearded Icons file icon set.</p>
 
-    <h3>Theme Families</h3>
+    <p>Every theme is designed for the modern IntelliJ Islands interface, with clear separation
+    between the editor and tool windows, softly rounded surfaces, focused tabs, and consistent
+    colors throughout the IDE.</p>
+
+    <h3>Meet Islands Moonstone</h3>
+    <p>Moonstone is a new IntelliJ-first theme with a calm slate workspace, cool turquoise accents,
+    and balanced syntax colors. It is designed to feel polished and comfortable during long coding sessions.</p>
+
+    <h3>What you get</h3>
     <ul>
-      <li><b>Classics</b> — Anthracite (dark) and Light</li>
-      <li><b>Arc</b> — Arc, Eolstorm, Blueberry, Eggplant, Reversed</li>
-      <li><b>Vivid</b> — Purple, Black, Light</li>
-      <li><b>Monokai</b> — Terra, Metallian, Stone, Black, Reversed</li>
-      <li><b>Solarized</b> — Dark, Reversed, Light</li>
-      <li><b>Oceanic</b> — Oceanic, Reversed</li>
-      <li><b>Milkshake</b> — Raspberry, Blueberry, Mango, Mint, Vanilla</li>
-      <li><b>Black &amp; Gems</b> — Gold, Ruby, Emerald, Diamond, Amethyst (+ Soft variants)</li>
-      <li><b>Aquarelle</b> — Cymbidium, Hydrangea, Lilac</li>
-      <li><b>High Contrast</b> — Ebony, Midnight Void, Wonderland Wood, Brewing Storm, Flurry</li>
-      <li><b>Stained</b> — Purple, Blue</li>
-      <li><b>Surprising</b> — Eggplant, Blueberry, Watermelon</li>
-      <li><b>Exotic</b> — Earth, Coffee, Coffee Cream, Voided, Altica</li>
-      <li><b>Featured</b> — Will, Gold D Raynh, Melle Julie, WebDevCody</li>
-      <li><b>Special</b> — Colorblind, OLED, Minuit, Chocolate Espresso</li>
+      <li><b>A theme for every mood:</b> understated classics, vivid palettes, soft pastels, OLED black, light themes, and high-contrast options</li>
+      <li><b>Modern Islands styling:</b> polished editor tabs, tool windows, menus, popups, buttons, trees, scrollbars, and status bars</li>
+      <li><b>Comfortable editor colors:</b> readable syntax highlighting, inactive text, search matches, and diff views</li>
+      <li><b>Broad language coverage:</b> Java, Kotlin, Python, JavaScript, TypeScript, Go, Rust, PHP, HTML, CSS, JSON, YAML, Markdown, and more</li>
+      <li><b>Bearded Icons:</b> distinctive icons for common languages, frameworks, folders, and configuration files</li>
     </ul>
 
-    <h3>Includes</h3>
-    <ul>
-      <li>Full UI theming (tool windows, tabs, trees, menus, buttons, etc.)</li>
-      <li>Complete editor color schemes with language-specific highlighting</li>
-      <li>Bearded Icons file icon set</li>
-      <li>Support for Java, Kotlin, Python, JavaScript/TypeScript, Go, Rust, PHP, HTML/CSS, JSON, YAML, Markdown, and more</li>
-    </ul>
+    <h3>Easy to personalize</h3>
+    <p>Select your theme from <b>Settings &gt; Appearance &amp; Behavior &gt; Appearance</b>.
+    The dedicated <b>Bearded Theme</b> settings page lets you enable or disable the matching file icons
+    separately, with a direct reminder of where to change colors.</p>
 
-    <p><em>A subscription of $1/month supports continued development and theme updates.</em></p>
+    <p><b>Requires IntelliJ Platform 2025.3 or newer.</b></p>
+    <p><em>A $1/month subscription supports continued theme improvements and new variants.</em></p>
   ]]></description>
 
   <change-notes><![CDATA[
-    <h3>1.2.0</h3>
+    <h3>2026.1.1 — A complete Islands refresh</h3>
     <ul>
-      <li>Add settings page to toggle Bearded file icons on/off (Settings &gt; Appearance &amp; Behavior &gt; Bearded Theme)</li>
+      <li>Added <b>Islands Moonstone</b>, a calm slate theme created specifically for the modern IntelliJ interface.</li>
+      <li>Refreshed all 65 themes with rounded Islands surfaces and clearer separation between the editor, tool windows, toolbar, and status bar.</li>
+      <li>Improved editor tabs with cleaner active, inactive, and hover states.</li>
+      <li>Improved readability for syntax colors and secondary or inactive text across dark and light themes.</li>
+      <li>Made search results and added, changed, deleted, and conflicting lines easier to recognize while keeping their text readable.</li>
+      <li>Improved button-label contrast and the distinction between focused and unfocused areas.</li>
+      <li>Made the Bearded Theme settings page clearer, including guidance for changing colors and a separate file-icon preference.</li>
+      <li>Updated compatibility for IntelliJ Platform 2025.3 and newer.</li>
     </ul>
 
-    <h3>1.1.0</h3>
+    <h3>1.2.0 — Icon preferences</h3>
     <ul>
-      <li>Remove IDE version upper bound for compatibility with all future IntelliJ versions</li>
-      <li>Fix compatibility with IntelliJ IDEA 2025.3.x</li>
+      <li>Added a setting to enable or disable Bearded file icons independently of the selected theme.</li>
     </ul>
 
-    <h3>1.0.0</h3>
+    <h3>1.0.0 — Initial release</h3>
     <ul>
-      <li>Initial release with 64 theme variants</li>
-      <li>Bearded Icons file icon set</li>
-      <li>Full editor color scheme support</li>
-      <li>Language-specific syntax highlighting for 12+ languages</li>
+      <li>Introduced 64 Bearded Theme variants with coordinated editor color schemes.</li>
+      <li>Included the complete Bearded Icons file icon set.</li>
+      <li>Added language-specific highlighting for popular JVM, web, scripting, and systems languages.</li>
     </ul>
   ]]></change-notes>
 
-  <idea-version since-build="241"/>
+  <idea-version since-build="253"/>
 
   <depends>com.intellij.modules.platform</depends>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Theme Providers -->
+    <!-- GENERATED-THEME-PROVIDERS:START -->
     <themeProvider id="dev.jetplugins.beardedtheme.anthracite" path="/themes/anthracite.theme.json" />
     <themeProvider id="dev.jetplugins.beardedtheme.anthracite-light" path="/themes/anthracite-light.theme.json" />
     <themeProvider id="dev.jetplugins.beardedtheme.arc" path="/themes/arc.theme.json" />
@@ -132,6 +133,8 @@
     <themeProvider id="dev.jetplugins.beardedtheme.melle-julie" path="/themes/melle-julie.theme.json" />
     <themeProvider id="dev.jetplugins.beardedtheme.melle-julie-light" path="/themes/melle-julie-light.theme.json" />
     <themeProvider id="dev.jetplugins.beardedtheme.webdevcody" path="/themes/webdevcody.theme.json" />
+    <themeProvider id="dev.jetplugins.beardedtheme.islands-moonstone" path="/themes/islands-moonstone.theme.json" />
+    <!-- GENERATED-THEME-PROVIDERS:END -->
 
     <!-- Settings -->
     <applicationService serviceImplementation="dev.jetplugins.beardedtheme.BeardedThemeSettings"/>
@@ -145,6 +148,9 @@
 
     <!-- License check on project open -->
     <postStartupActivity implementation="dev.jetplugins.beardedtheme.BeardedThemeLicenseCheck"/>
+
+    <!-- Dormant unless the dedicated Gradle task launches a live Marketplace capture session -->
+    <postStartupActivity implementation="dev.jetplugins.beardedtheme.MarketplaceScreenshotActivity"/>
 
     <!-- Notification group for license warnings -->
     <notificationGroup id="Bearded Theme" displayType="STICKY_BALLOON"/>

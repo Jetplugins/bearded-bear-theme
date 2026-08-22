@@ -1,0 +1,13 @@
+{
+  "name": "intellij-bearded-bear-theme-generator",
+  "private": true,
+  "version": "2026.1.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-themes.js",
+    "check:generated": "node scripts/generate-themes.js --check",
+    "test": "node --test scripts/test/*.test.js"
+  }
+}

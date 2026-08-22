@@ -31,6 +31,9 @@ public class BeardedThemeLicenseCheck implements ProjectActivity {
     @Nullable
     @Override
     public Object execute(@NotNull Project project, @NotNull Continuation<? super Unit> continuation) {
+        if (System.getProperty(MarketplaceScreenshotActivity.OUTPUT_PROPERTY) != null) {
+            return Unit.INSTANCE;
+        }
         ApplicationManager.getApplication().invokeLater(() -> checkLicense(project));
         return Unit.INSTANCE;
     }
