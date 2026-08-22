@@ -37,38 +37,6 @@
     <p><em>A $1/month subscription supports continued theme improvements and new variants.</em></p>
   ]]></description>
 
-  <change-notes><![CDATA[
-    <h3>2026.1.1 — A complete Islands refresh</h3>
-    <ul>
-      <li>Added <b>Islands Moonstone</b>, a calm slate theme created specifically for the modern IntelliJ interface.</li>
-      <li>Refreshed all 65 themes with rounded Islands surfaces and clearer separation between the editor, tool windows, toolbar, and status bar.</li>
-      <li>Improved editor tabs with cleaner active, inactive, and hover states.</li>
-      <li>Improved readability for syntax colors and secondary or inactive text across dark and light themes.</li>
-      <li>Made search results and added, changed, deleted, and conflicting lines easier to recognize while keeping their text readable.</li>
-      <li>Improved button-label contrast and the distinction between focused and unfocused areas.</li>
-      <li>Made the Bearded Theme settings page clearer, including guidance for changing colors and a separate file-icon preference.</li>
-      <li>Updated compatibility for IntelliJ Platform 2025.3 and newer.</li>
-    </ul>
-
-    <h3>1.2.0 — Icon preferences</h3>
-    <ul>
-      <li>Added a setting to enable or disable Bearded file icons independently of the selected theme.</li>
-    </ul>
-
-    <h3>1.1.0 — Compatibility</h3>
-    <ul>
-      <li>Removed the IDE version upper bound to support newer IntelliJ releases.</li>
-      <li>Fixed compatibility with IntelliJ IDEA 2025.3.x.</li>
-    </ul>
-
-    <h3>1.0.0 — Initial release</h3>
-    <ul>
-      <li>Introduced 64 Bearded Theme variants with coordinated editor color schemes.</li>
-      <li>Included the complete Bearded Icons file icon set.</li>
-      <li>Added language-specific highlighting for popular JVM, web, scripting, and systems languages.</li>
-    </ul>
-  ]]></change-notes>
-
   <idea-version since-build="253"/>
 
   <depends>com.intellij.modules.platform</depends>

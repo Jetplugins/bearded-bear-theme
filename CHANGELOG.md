@@ -1,10 +1,8 @@
-# Changelog
+# Bearded Theme Changelog
 
-This changelog covers user-facing changes to Bearded Theme for IntelliJ.
+## [Unreleased]
 
-## 2026.1.1 - 2026-08-22
-
-A complete Islands refresh for the whole Bearded Theme collection.
+The next release is a complete Islands refresh for the whole Bearded Theme collection.
 
 ### New
 
@@ -24,20 +22,20 @@ A complete Islands refresh for the whole Bearded Theme collection.
 
 - Updated compatibility for IntelliJ Platform 2025.3 and newer.
 
-## 1.2.0 - 2026-02-13
+## [1.2.0] - 2026-02-13
 
 ### New
 
 - Added a setting to enable or disable Bearded file icons independently of the selected theme.
 
-## 1.1.0 - 2026-02-03
+## [1.1.0] - 2026-02-03
 
 ### Compatibility
 
 - Removed the IDE version upper bound to support newer IntelliJ releases.
 - Fixed compatibility with IntelliJ IDEA 2025.3.x.
 
-## 1.0.0 - 2026-01-31
+## [1.0.0] - 2026-01-31
 
 ### New
 

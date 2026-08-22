@@ -1,6 +1,9 @@
+import org.jetbrains.changelog.Changelog
+
 plugins {
     id("java")
     id("org.jetbrains.intellij.platform") version "2.18.1"
+    id("org.jetbrains.changelog") version "2.5.0"
 }
 
 group = "dev.jetplugins.beardedtheme"
@@ -58,6 +61,20 @@ intellijPlatform {
     buildSearchableOptions = false
 
     pluginConfiguration {
+        version = project.version.toString()
+
+        val changelog = project.changelog
+        changeNotes = version.map { pluginVersion ->
+            with(changelog) {
+                renderItem(
+                    (getOrNull(pluginVersion) ?: getUnreleased())
+                        .withHeader(false)
+                        .withEmptySections(false),
+                    Changelog.OutputType.HTML,
+                )
+            }
+        }
+
         ideaVersion {
             sinceBuild = "253"
             untilBuild = provider { null }
@@ -85,6 +102,12 @@ intellijPlatform {
                 .forEach { create("IU", it) }
         }
     }
+}
+
+changelog {
+    groups.empty()
+    repositoryUrl = "https://github.com/Jetplugins/internal-intellij-bearded-bear-theme"
+    versionPrefix = ""
 }
 
 intellijPlatformTesting {

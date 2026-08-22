@@ -111,8 +111,10 @@ Every push to `main` builds the plugin and creates or refreshes a draft GitHub r
 version declared in `build.gradle.kts`. The plugin ZIP is attached to the draft. Publishing that
 draft as a stable GitHub release automatically runs the lightweight JetBrains Marketplace publish
 workflow—without the Plugin Verifier—and publishes the tagged source with `./gradlew publishPlugin`.
-Release notes are taken from the matching version section in `CHANGELOG.md`; the workflow stops if
-that section is missing so a draft cannot silently ship without user-facing notes.
+Release notes are taken from the `[Unreleased]` section in `CHANGELOG.md`; the workflow stops if that
+section is empty so a draft cannot silently ship without user-facing notes. When publishing a
+release, move those entries under a dated version heading and add a fresh `[Unreleased]` section as
+part of the next version bump.
 
 Add a repository Actions secret named `PUBLISH_TOKEN` containing a JetBrains Marketplace token.
 Before starting the next release cycle, update the version in `build.gradle.kts`; GitHub and the
