@@ -35,6 +35,14 @@ jobs:
           VERSION=$(./gradlew properties --quiet --console=plain | sed -n 's/^version: //p')
           test -n "$VERSION"
 
+          RELEASED_ID=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases" \
+            --jq ".[] | select(.draft == false and .tag_name == \"$VERSION\") | .id" \
+            | head -n 1)
+          if [ -n "$RELEASED_ID" ]; then
+            echo "Version $VERSION is already released; bump the project version before creating another draft."
+            exit 0
+          fi
+
           RELEASE_NOTES=build/tmp/release-notes.md
           ./gradlew getChangelog \
             --unreleased \

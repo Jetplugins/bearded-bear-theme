@@ -4,7 +4,7 @@
   <vendor email="support@jetplugins.dev" url="https://jetplugins.dev">Bearded Bear</vendor>
   <version>2026.1.1</version>
 
-  <product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="false"/>
+  <product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="true"/>
 
   <description><![CDATA[
     <h2>Give your JetBrains IDE a warmer, more distinctive workspace</h2>
