@@ -55,6 +55,12 @@
       <li>Added a setting to enable or disable Bearded file icons independently of the selected theme.</li>
     </ul>
 
+    <h3>1.1.0 — Compatibility</h3>
+    <ul>
+      <li>Removed the IDE version upper bound to support newer IntelliJ releases.</li>
+      <li>Fixed compatibility with IntelliJ IDEA 2025.3.x.</li>
+    </ul>
+
     <h3>1.0.0 — Initial release</h3>
     <ul>
       <li>Introduced 64 Bearded Theme variants with coordinated editor color schemes.</li>

@@ -35,6 +35,15 @@ jobs:
           VERSION=$(./gradlew properties --quiet --console=plain | sed -n 's/^version: //p')
           test -n "$VERSION"
 
+          awk -v version="$VERSION" '
+            BEGIN { heading = "## " version }
+            $0 == heading || index($0, heading " - ") == 1 { found = 1; next }
+            found && /^## / { exit }
+            found { print }
+            END { if (!found) exit 1 }
+          ' CHANGELOG.md > release-notes.md
+          test -s release-notes.md
+
           DRAFT_IDS=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases" \
             --jq ".[] | select(.draft == true and .tag_name == \"$VERSION\") | .id")
           for DRAFT_ID in $DRAFT_IDS; do
@@ -44,6 +53,6 @@ jobs:
           gh release create "$VERSION" \
             build/distributions/*.zip \
             --draft \
-            --generate-notes \
+            --notes-file release-notes.md \
             --target "$GITHUB_SHA" \
             --title "$VERSION"
