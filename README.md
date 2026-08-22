@@ -105,7 +105,7 @@ created so every run produces a complete Marketplace media set.
 
 ### Release automation
 
-Every push to `master` builds the plugin and creates or refreshes a draft GitHub release for the
+Every push to `main` builds the plugin and creates or refreshes a draft GitHub release for the
 version declared in `build.gradle.kts`. The plugin ZIP is attached to the draft. Publishing that
 draft as a stable GitHub release automatically runs the lightweight JetBrains Marketplace publish
 workflow—without the Plugin Verifier—and publishes the tagged source with `./gradlew publishPlugin`.
