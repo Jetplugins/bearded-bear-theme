@@ -354,9 +354,6 @@ public final class MarketplaceScreenshotActivity implements ProjectActivity {
                     throw new IllegalStateException("IntelliJ did not activate " + theme.name()
                         + " before its screenshot was requested");
                 }
-                if (ideFrame.getBalloonLayout() != null) {
-                    ideFrame.getBalloonLayout().closeAll();
-                }
                 int projectViewWidth = constrainProjectViewWidth(project);
                 if (Math.abs(projectViewWidth - WIDTH / 4) > 8) {
                     throw new IllegalStateException("Expected the Project tool window to be 25% wide ("

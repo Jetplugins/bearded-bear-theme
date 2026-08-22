@@ -18,6 +18,10 @@ The next release is a complete Islands refresh for the whole Bearded Theme colle
 - Improved button-label contrast and the distinction between focused and unfocused areas.
 - Clarified the Bearded Theme settings page, including color-theme guidance and the separate file-icon preference.
 
+### Fixed
+
+- Removed unsupported IntelliJ internal API usage so the plugin passes Marketplace compatibility checks.
+
 ### Compatibility
 
 - Updated compatibility for IntelliJ Platform 2025.3 and newer.
