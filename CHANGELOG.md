@@ -21,6 +21,8 @@ The next release is a complete Islands refresh for the whole Bearded Theme colle
 ### Fixed
 
 - Removed unsupported IntelliJ internal API usage so the plugin passes Marketplace compatibility checks.
+- Restored the complete GPLv3 terms, upstream attribution, and version-matched source directions in the plugin distribution.
+- Removed the runtime subscription warning so received copies are not presented as requiring payment to use under GPLv3.
 
 ### Compatibility
 

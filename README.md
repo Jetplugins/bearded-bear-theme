@@ -122,7 +122,9 @@ Marketplace both require each published version to be unique.
 
 ## Subscription
 
-This is a paid plugin and requires an active **$1/month** subscription on the JetBrains Marketplace.
+The JetBrains Marketplace charges **$1/month** for access to its delivery channel, updates, and
+support. Once you receive a copy, your right to use, study, modify, and redistribute it is governed
+by GPLv3 and is not conditioned on an active subscription.
 
 ## Credits
 
@@ -132,4 +134,8 @@ This is a paid plugin and requires an active **$1/month** subscription on the Je
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](LICENSE).
+This plugin is free software licensed under the [GNU General Public License v3.0](LICENSE), including
+the IntelliJ adaptations of [Bearded Theme](https://github.com/BeardedBear/bearded-theme) and
+[Bearded Icons](https://github.com/BeardedBear/bearded-icons). See
+[the third-party notices](THIRD_PARTY_NOTICES.md) for attribution and [the source-code notice](SOURCE_CODE.md)
+for the version-matched source location included in every distribution.

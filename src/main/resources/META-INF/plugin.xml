@@ -2,7 +2,7 @@
   <id>dev.jetplugins.beardedtheme</id>
   <name>Bearded Theme: Dark &amp; Light</name>
   <vendor email="support@jetplugins.dev" url="https://jetplugins.dev">Bearded Bear</vendor>
-  <version>2026.1.1</version>
+  <version>2026.1.2</version>
 
   <product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="true"/>
 
@@ -34,7 +34,8 @@
     separately, with a direct reminder of where to change colors.</p>
 
     <p><b>Requires IntelliJ Platform 2025.3 or newer.</b></p>
-    <p><em>A $1/month subscription supports continued theme improvements and new variants.</em></p>
+    <p><em>The Marketplace subscription supports delivery, updates, and continued theme improvements.
+    Copies you receive remain free software under GPLv3.</em></p>
   ]]></description>
 
   <idea-version since-build="253"/>
@@ -120,13 +121,7 @@
     <!-- Bearded Icons File Icon Provider -->
     <iconProvider implementation="dev.jetplugins.beardedtheme.BeardedIconProvider" id="BeardedIconProvider" order="first"/>
 
-    <!-- License check on project open -->
-    <postStartupActivity implementation="dev.jetplugins.beardedtheme.BeardedThemeLicenseCheck"/>
-
     <!-- Dormant unless the dedicated Gradle task launches a live Marketplace capture session -->
     <postStartupActivity implementation="dev.jetplugins.beardedtheme.MarketplaceScreenshotActivity"/>
-
-    <!-- Notification group for license warnings -->
-    <notificationGroup id="Bearded Theme" displayType="STICKY_BALLOON"/>
   </extensions>
 </idea-plugin>

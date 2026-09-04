@@ -22,24 +22,24 @@ Upload the built `.zip` from `build/distributions/` to https://plugins.jetbrains
 3. Set pricing tier:
    - Monthly: $1.00
    - Annual: $10.00
-4. Use paid-only mode — the `optional="false"` attribute in `product-descriptor`
-   means the plugin requires an active subscription
+4. Keep `optional="true"` in `product-descriptor`. Marketplace payment governs access to its
+   delivery channel, updates, and support; it must not restrict GPL rights in copies already received.
 
 ### 3. Product Descriptor
 The `plugin.xml` contains:
 ```xml
-<product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="false"/>
+<product-descriptor code="PBEARDEDTHEME" release-date="20260311" release-version="20261" optional="true"/>
 ```
 
 - `code` = unique product code for licensing
-- `optional="false"` = paid model requiring an active subscription
+- `optional="true"` = the plugin does not enforce a runtime subscription restriction
 - `release-date` = date of first release (YYYYMMDD format)
 - `release-version` = numeric version for license tracking
 
-### 4. License Validation
-The `BeardedThemeLicenseCheck` class validates the subscription on project open
-via `LicensingFacade.getConfirmationStamp("PBEARDEDTHEME")`. If unlicensed, it
-shows a license-required warning.
+### 4. GPL rights
+Do not add runtime checks or notices saying that a Marketplace subscription is required to use,
+modify, or redistribute a received copy. The Marketplace may charge for delivery and support, but
+the GPLv3 terms govern recipients' rights in the plugin.
 
 ### 5. Signing
 Set these environment variables for plugin signing:
